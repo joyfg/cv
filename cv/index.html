@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Joy-floris Guerin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Section de gauche avec le CV -->
+        <div class="cv-container">
+            <img src="cv_joy.jpg" alt="CV Joy-floris Guerin">
+        </div>
+
+        <!-- Section de droite avec les boutons -->
+        <div class="right-section">
+            <h2>Liens</h2>
+            <a href="https://linkedin.com/in/joy-guerin/" target="_blank" class="btn">LinkedIn</a>
+            <a href="https://github.com/joyfg" target="_blank" class="btn">GitHub</a>
+            
+            <h3>Télécharger le CV</h3>
+            <form id="download-form" action="https://formspree.io/" method="POST" target="_self">
+                <label>
+                    Votre email :
+                    <input type="email" name="email" required>
+                </label>
+                
+                <!-- Champ caché pour personnaliser l'objet du mail -->
+                <input type="hidden" name="_subject" value="Nouveau téléchargement de CV !">
+                
+                <button type="submit">Télécharger</button>
+            </form>            
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Guerin Joy-floris - Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
