@@ -4,7 +4,7 @@ document.getElementById("download-form").addEventListener("submit", function(eve
     let formData = new FormData(this);
 
     // Envoyer les données à Formspree en AJAX
-    fetch("https://formspree.io/f/xnnpjyav", {
+    fetch("https://formspree.io/f/xldoyzye", {
         method: "POST",
         body: formData,
         headers: { "Accept": "application/json" }
