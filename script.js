@@ -25,7 +25,7 @@ form.addEventListener("submit", function(event) {
         if (response.ok) {
             // Télécharger le CV PDF après l'envoi réussi
             let link = document.createElement("a");
-            link.href = "cv_joy.pdf";
+            link.href = "cv_joy.pdf?v=4";
             link.download = "cv_joy.pdf";
             document.body.appendChild(link);
             link.click();
