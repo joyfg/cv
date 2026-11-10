@@ -4,35 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Joy-floris Guerin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <!-- Section de gauche avec le CV -->
         <div class="cv-container">
             <img src="cv_joy.jpg" alt="CV Joy-floris Guerin">
         </div>
 
-        <!-- Section de droite avec les boutons -->
-        <div class="right-section">
-            <h2>Liens</h2>
-            <a href="https://linkedin.com/in/joy-guerin/" target="_blank" class="btn">LinkedIn</a>
-            <a href="https://github.com/joyfg" target="_blank" class="btn">GitHub</a>
-            
-            <h3>Télécharger le CV</h3>
-            <form id="download-form" action="https://formspree.io/" method="POST" target="_self">
-                <label>
-                    Votre email :
-                    <input type="email" name="email" required>
-                </label>
-                
-                <!-- Champ caché pour personnaliser l'objet du mail -->
-                <input type="hidden" name="_subject" value="Nouveau téléchargement de CV !">
-                
-                <button type="submit">Télécharger</button>
-            </form>            
-        </div>
-    </div>
+        <!-- Section de droite avec les actions -->
+        <aside class="right-section">
+            <header class="intro">
+                <p class="eyebrow">Curriculum vitæ</p>
+                <h1>Joy-floris Guerin</h1>
+            </header>
+
+            <section class="block">
+                <h2>Liens</h2>
+                <a href="https://linkedin.com/in/joy-guerin/" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                    LinkedIn
+                </a>
+            </section>
+
+            <section class="block">
+                <h2>Télécharger le CV</h2>
+                <form id="download-form" action="https://formspree.io/" method="POST" target="_self">
+                    <label for="email">Votre email</label>
+                    <input type="email" id="email" name="email" placeholder="vous@exemple.com" autocomplete="email" required>
+
+                    <!-- Champ caché pour personnaliser l'objet du mail -->
+                    <input type="hidden" name="_subject" value="Nouveau téléchargement de CV !">
+
+                    <button type="submit" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v9.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1zM5 19a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2H5z"/></svg>
+                        Télécharger
+                    </button>
+                    <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+        </aside>
+    </main>
 
     <!-- Footer -->
     <footer>
